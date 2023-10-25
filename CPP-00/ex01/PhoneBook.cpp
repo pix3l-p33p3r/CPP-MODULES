@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:16:40 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/10/26 00:43:37 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/10/26 00:48:22 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,14 +100,14 @@ void PhoneBook::show_details()
 				std::cout << "There is no contact" << std::endl;
 		} else {
 			std::cout << std::left;
-			std::cout << "~-------------------------------------------~" << std::endl;
+			std::cout << "#-------------------------------------------#" << std::endl;
 			std::cout << "|-----------------Contact " << i << "-----------------|" << std::endl;
 			std::cout << std::setw(15) << "First name" << ": " << con[i].get_f_name() << std::endl;
 			std::cout << std::setw(15) << "Last name" << ": " << con[i].get_l_name() << std::endl;
 			std::cout << std::setw(15) << "Nick name" << ": " << con[i].get_n_name() << std::endl;
 			std::cout << std::setw(15) << "Darkest secret" << ": " << con[i].get_darkest_secret() << std::endl;
 			std::cout << std::setw(15) << "Phone number" << ": " << con[i].get_phone() << std::endl;
-			std::cout << "~-------------------------------------------~" << std::endl;
+			std::cout << "#-------------------------------------------#" << std::endl;
 		}
 	}
 }
