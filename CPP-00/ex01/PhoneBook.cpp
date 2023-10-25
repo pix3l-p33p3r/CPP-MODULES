@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:16:40 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/10/24 16:30:49 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/10/26 00:43:37 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void PhoneBook::show_details()
 	}
 
 	bool isDigit = true;
-	for (char c : index_contact) {
+	for (char c = index_contact[0]; c != index_contact[i]; i++) {
 		if (!std::isdigit(static_cast<unsigned char>(c))) {
 			isDigit = false;
 			break;

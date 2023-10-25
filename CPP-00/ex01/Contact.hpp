@@ -6,14 +6,14 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:16:37 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/10/24 03:43:02 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/10/26 00:36:32 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONATCT_HPP
 
-#include <iostream>
+#include <iostream> // Include for std::cout, std::cin, std::endl
 
 class Contact{
 	private:

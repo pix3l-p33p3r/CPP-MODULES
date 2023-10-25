@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:25:52 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/10/24 03:36:32 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/10/26 00:30:06 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,31 @@ int check_valid(const std::string tmp[5]) {
 	for (int i = 0; i < 5; i++) {
 		switch (i) {
 			case 0:
-				if (!tmp[i].empty() && !std::isalpha(tmp[i][0])) {
+				if (tmp[i].empty() || !std::isalpha(tmp[i][0])) {
 					std::cout << "Error: Enter a valid first name" << std::endl;
 					return -1;
 				}
 				break;
 			case 1:
-				if (!tmp[i].empty() && !std::isalpha(tmp[i][0])) {
+				if (tmp[i].empty() || !std::isalpha(tmp[i][0])) {
 					std::cout << "Error: Enter a valid last name" << std::endl;
 					return -1;
 				}
 				break;
 			case 2:
-				if (!tmp[i].empty() && !std::isalpha(tmp[i][0])) {
+				if (tmp[i].empty() || !std::isalpha(tmp[i][0])) {
 					std::cout << "Error: Enter a valid nick name" << std::endl;
 					return -1;
 				}
 				break;
 			case 3:
-				if (!tmp[i].empty() && !std::isalnum(tmp[i][0])) {
+				if (tmp[i].empty() || !std::isalnum(tmp[i][0])) {
 					std::cout << "Error: Enter a valid darkest secret" << std::endl;
 					return -1;
 				}
 				break;
 			case 4:
-				if (!tmp[i].empty() && !std::isdigit(tmp[i][0])) {
+				if (tmp[i].empty() || !std::isdigit(tmp[i][0])) {
 					std::cout << "Error: Enter a valid phone number" << std::endl;
 					return -1;
 				}
