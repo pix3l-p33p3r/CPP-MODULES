@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:16:40 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/10/26 00:48:22 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/10/26 01:02:27 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void PhoneBook::show_details()
 	int i;
 
 	std::cout << "~-------------------------------------------~" << std::endl;
-	std::cout << "|     index|First name| Last name|  Nickname|" << std::endl;
+	std::cout << "|     index|First name|Last name |  Nickname|" << std::endl;
 	std::cout << "|-------------------------------------------|" << std::endl;
 	for (i = 0; i < number_of_contacts; i++)
 	{
@@ -72,10 +72,10 @@ void PhoneBook::show_details()
 		std::cout << "|" << std::endl;
 	}
 	std::cout << "~-------------------------------------------~" << std::endl;
-	std::cout << "Enter the index of your contact: ";
+	std::cout << "Enter contact index : ";
 	if (!getline(std::cin, index_contact))
 	{
-		std::cout << "END OF FILE" << std::endl;
+		std::cout << "EoF" << std::endl;
 		exit(0);
 	}
 
@@ -88,25 +88,25 @@ void PhoneBook::show_details()
 	}
 
 	if (!isDigit) {
-		std::cout << "Try to enter a valid index" << std::endl;
+		std::cout << "Enter a valid index" << std::endl;
 	} else {
 		const char* cstr = index_contact.c_str();
 		i = std::atoi(cstr);
 
 		if (i >= number_of_contacts) {
 			if (number_of_contacts > 0)
-				std::cout << "Try to enter an index between 0 and " << number_of_contacts - 1 << std::endl;
+				std::cout << "Enter an index between 0 and " << number_of_contacts - 1 << std::endl;
 			else
 				std::cout << "There is no contact" << std::endl;
 		} else {
 			std::cout << std::left;
 			std::cout << "#-------------------------------------------#" << std::endl;
 			std::cout << "|-----------------Contact " << i << "-----------------|" << std::endl;
-			std::cout << std::setw(15) << "First name" << ": " << con[i].get_f_name() << std::endl;
-			std::cout << std::setw(15) << "Last name" << ": " << con[i].get_l_name() << std::endl;
-			std::cout << std::setw(15) << "Nick name" << ": " << con[i].get_n_name() << std::endl;
-			std::cout << std::setw(15) << "Darkest secret" << ": " << con[i].get_darkest_secret() << std::endl;
-			std::cout << std::setw(15) << "Phone number" << ": " << con[i].get_phone() << std::endl;
+			std::cout << std::setw(21) << "First name" << ": " << con[i].get_f_name() << std::endl;
+			std::cout << std::setw(21) << "Last name" << ": " << con[i].get_l_name() << std::endl;
+			std::cout << std::setw(21) << "Nick name" << ": " << con[i].get_n_name() << std::endl;
+			std::cout << std::setw(21) << "Darkest secret" << ": " << con[i].get_darkest_secret() << std::endl;
+			std::cout << std::setw(21) << "Phone number" << ": " << con[i].get_phone() << std::endl;
 			std::cout << "#-------------------------------------------#" << std::endl;
 		}
 	}
