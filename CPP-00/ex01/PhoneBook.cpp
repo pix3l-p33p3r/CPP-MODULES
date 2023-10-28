@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: elel-yak <elel-yak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:16:40 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/10/26 01:02:27 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/10/28 13:59:06 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,25 +79,19 @@ void PhoneBook::show_details()
 		exit(0);
 	}
 
-	bool isDigit = true;
-	for (char c = index_contact[0]; c != index_contact[i]; i++) {
-		if (!std::isdigit(static_cast<unsigned char>(c))) {
-			isDigit = false;
-			break;
-		}
-	}
-
-	if (!isDigit) {
-		std::cout << "Enter a valid index" << std::endl;
+	std::string::size_type j = 0;
+	for (; std::isdigit(index_contact[j]) && j <  index_contact.size(); j++);
+	if (j != index_contact.size()) {
+		std::cout << "Unvalid index" << std::endl;
 	} else {
 		const char* cstr = index_contact.c_str();
 		i = std::atoi(cstr);
 
 		if (i >= number_of_contacts) {
 			if (number_of_contacts > 0)
-				std::cout << "Enter an index between 0 and " << number_of_contacts - 1 << std::endl;
+				std::cout << "The index must be between 0 and " << number_of_contacts - 1 << std::endl;
 			else
-				std::cout << "There is no contact" << std::endl;
+				std::cout << "No contact has been found" << std::endl;
 		} else {
 			std::cout << std::left;
 			std::cout << "#-------------------------------------------#" << std::endl;

@@ -3,15 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+         #
+#    By: elel-yak <elel-yak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 17:54:28 by elel-yak          #+#    #+#              #
-#    Updated: 2023/10/26 00:12:12 by elel-yak         ###   ########.fr        #
+#    Updated: 2023/10/28 11:49:22 by elel-yak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = megaphone
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror cin
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 
